@@ -20,8 +20,6 @@ const TrackKey = ({ track, toggleOpen, clickTrackButton }) => {
     return null
   }
 
-  console.log(isExpandable);
-
   return (
     <li className="rt-track-key">
       <div className="rt-track-key__entry" onClick={() => isExpandable && toggleOpen(track)}>
