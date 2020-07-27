@@ -36,7 +36,7 @@ const Basic = ({ title, start, end, style, classes, dataSet, tooltip }) => (
 )
 
 Basic.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.object.isRequired,
   start: PropTypes.instanceOf(Date).isRequired,
   end: PropTypes.instanceOf(Date).isRequired,
   style: PropTypes.shape({}),
