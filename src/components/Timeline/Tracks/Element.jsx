@@ -37,7 +37,7 @@ Element.propTypes = {
   style: PropTypes.shape({}),
   classes: PropTypes.arrayOf(PropTypes.string.isRequired),
   dataSet: PropTypes.shape({}),
-  title: PropTypes.object,
+  title: PropTypes.shape({}),
   start: PropTypes.instanceOf(Date).isRequired,
   end: PropTypes.instanceOf(Date).isRequired,
   tooltip: PropTypes.string,

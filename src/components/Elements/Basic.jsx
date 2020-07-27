@@ -21,22 +21,22 @@ const Basic = ({ title, start, end, style, classes, dataSet, tooltip }) => (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: tooltip.split('\n').join('<br>') }} />
       ) : (
-        <div>
-          <div>{title}</div>
           <div>
-            <strong>Start</strong> {getDayMonth(start)}
+            <div>{title}</div>
+            <div>
+              <strong>Start</strong> {getDayMonth(start)}
+            </div>
+            <div>
+              <strong>End</strong> {getDayMonth(end)}
+            </div>
           </div>
-          <div>
-            <strong>End</strong> {getDayMonth(end)}
-          </div>
-        </div>
-      )}
+        )}
     </div>
   </div>
 )
 
 Basic.propTypes = {
-  title: PropTypes.object.isRequired,
+  title: PropTypes.shape({}).isRequired,
   start: PropTypes.instanceOf(Date).isRequired,
   end: PropTypes.instanceOf(Date).isRequired,
   style: PropTypes.shape({}),
