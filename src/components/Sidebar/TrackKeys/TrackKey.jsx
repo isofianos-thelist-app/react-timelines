@@ -22,11 +22,12 @@ const TrackKey = ({ track, toggleOpen, clickTrackButton }) => {
 
   return (
     <li className="rt-track-key">
-      <div className="rt-track-key__entry" onClick={() => { hasButton ? toggleOpen(track) : null }}>
+      <div className="rt-track-key__entry">
         {isExpandable && (
           <button
             title="Expand track"
             className={`rt-track-key__toggle ${isOpen ? 'rt-track-key__toggle--close' : 'rt-track-key__toggle--open'}`}
+            onClick={() => toggleOpen(track)}
             type="button"
           >
             {isOpen ? 'Close' : 'Open'}
