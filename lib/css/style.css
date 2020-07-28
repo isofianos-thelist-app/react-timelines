@@ -141,8 +141,8 @@
   opacity: 1; }
 
 .rt-marker--now {
-  color: #ff007f;
-  border-color: rgba(255, 0, 127, 0.5); }
+  color: #b98a56;
+  border-color: rgba(185, 138, 86, 0.5); }
 
 .rt-marker--pointer {
   color: #888;
@@ -170,11 +170,11 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-left: -6px;
+    margin-left: -8px;
     transform: translateX(-1px);
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid currentColor;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid currentColor;
     content: ' '; }
 
 .rt-marker__content {
