@@ -304,16 +304,9 @@
 
 .rt-track-key__toggle {
   overflow: hidden;
-  width: 20px;
-  height: 20px;
   margin-right: 10px;
-  background: #4c4c4c no-repeat center/10px;
-  color: transparent; }
-  .rt-track-key__toggle:hover, .rt-track-key__toggle:focus {
-    background-color: #191919; }
-
-.rt-track-key__toggle--close,
-.rt-track-key__toggle--open {
+  background: white;
+  color: transparent;
   outline: none;
   cursor: pointer;
   width: 0;

@@ -48,23 +48,10 @@
 }
 
 .rt-track-key__toggle {
-  $icon-size: 20px;
-
   overflow: hidden;
-  width: $icon-size;
-  height: $icon-size;
   margin-right: 10px;
-  background: $react-timelines-text-color no-repeat center/10px;
+  background: white;
   color: transparent;
-
-  &:hover,
-  &:focus {
-    background-color: darken($react-timelines-text-color, 20%);
-  }
-}
-
-.rt-track-key__toggle--close,
-.rt-track-key__toggle--open {
   outline: none;
 	cursor: pointer;
 	width: 0; 
