@@ -225,7 +225,7 @@
 
 .rt-timebar-key {
   height: 41px;
-  padding-right: 20px;
+  padding-right: 15px;
   line-height: 40px;
   text-align: right;
   font-weight: bold;
@@ -274,13 +274,20 @@
 
 .rt-track-keys > .rt-track-key >
 .rt-track-key__entry {
-  padding-left: 20px; }
+  padding-left: 15px; }
 
 .rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
 .rt-track-key__entry {
-  padding-left: 40px; }
+  padding-left: 30px; }
 
+.rt-track-keys > .rt-track-key >
+.rt-track-keys > .rt-track-key >
+.rt-track-keys > .rt-track-key >
+.rt-track-key__entry {
+  padding-left: 45px; }
+
+.rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
@@ -291,16 +298,9 @@
 .rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
-.rt-track-key__entry {
-  padding-left: 80px; }
-
-.rt-track-keys > .rt-track-key >
-.rt-track-keys > .rt-track-key >
-.rt-track-keys > .rt-track-key >
-.rt-track-keys > .rt-track-key >
 .rt-track-keys > .rt-track-key >
 .rt-track-key__entry {
-  padding-left: 100px; }
+  padding-left: 75px; }
 
 .rt-track-key__toggle {
   overflow: hidden;
@@ -312,11 +312,23 @@
   .rt-track-key__toggle:hover, .rt-track-key__toggle:focus {
     background-color: #191919; }
 
+.rt-track-key__toggle--close,
+.rt-track-key__toggle--open {
+  outline: none;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  -webkit-tap-highlight-color: transparent; }
+
 .rt-track-key__toggle--close {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iOCIgdmlld0JveD0iMTYgMjQgMjQgOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTYgMjRoMjR2OEgxNnoiIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg=="); }
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #191919; }
 
 .rt-track-key__toggle--open {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjE2IDE1IDI0IDI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTMyIDE2djI0aC04VjE2eiIvPjxwYXRoIGQ9Ik0xNiAyNGgyNHY4SDE2eiIvPjwvZz48L3N2Zz4="); }
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #191919; }
 
 .rt-track-key__title {
   flex: 1;
