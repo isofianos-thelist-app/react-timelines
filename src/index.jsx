@@ -93,6 +93,7 @@ class Timeline extends Component {
           sidebarWidth={sidebarWidth}
           clickElement={clickElement}
           clickTrackButton={clickTrackButton}
+          nowRefreshInterval={nowRefreshInterval}
         />
       </div>
     )
@@ -120,6 +121,7 @@ Timeline.propTypes = {
   toggleTrackOpen: PropTypes.func,
   enableSticky: PropTypes.bool,
   scrollToNow: PropTypes.bool,
+  nowRefreshInterval: PropTypes.number
 }
 
 export default Timeline
