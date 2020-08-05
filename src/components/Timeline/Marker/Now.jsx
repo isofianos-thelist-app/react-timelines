@@ -21,7 +21,7 @@ class NowMarker extends PureComponent {
   }
 
   tick() {
-    this.setState({ now: Date.now() });
+    this.setState({ now: new Date() });
   }
 
   render() {
