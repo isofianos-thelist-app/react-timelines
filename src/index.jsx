@@ -62,6 +62,7 @@ class Timeline extends Component {
       toggleTrackOpen,
       enableSticky = false,
       scrollToNow,
+      nowRefreshInterval
     } = this.props
 
     const { time, timelineViewportWidth, sidebarWidth } = this.state
