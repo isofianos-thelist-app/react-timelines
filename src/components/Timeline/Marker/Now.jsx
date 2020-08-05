@@ -13,7 +13,7 @@ class NowMarker extends PureComponent {
   componentDidMount() {
     this.intervalID = setInterval(
       () => this.tick(),
-      props.nowRefreshInterval || ONE_MINUTE_IN_MILLISECONDS
+      this.props.nowRefreshInterval || ONE_MINUTE_IN_MILLISECONDS
     );
   }
   componentWillUnmount() {
