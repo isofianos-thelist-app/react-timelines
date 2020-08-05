@@ -316,12 +316,14 @@
 .rt-track-key__toggle--close {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #191919; }
+  border-bottom: 8px solid #191919;
+  border-top: 0; }
 
 .rt-track-key__toggle--open {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 8px solid #191919; }
+  border-top: 8px solid #191919;
+  border-bottom: 0; }
 
 .rt-track-key__title {
   flex: 1;

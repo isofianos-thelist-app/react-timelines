@@ -5,8 +5,30 @@ import Marker from '.'
 import { getDayMonth } from '../../../utils/formatDate'
 
 class NowMarker extends PureComponent {
+
+  state = {
+    now: this.props.now
+  }
+
+  componentDidMount() {
+    this.intervalID = setInterval(
+      () => this.tick(),
+      5 * 1000
+    );
+  }
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
+
+  tick() {
+    this.setState({
+      time: new Date()
+    });
+  }
+
   render() {
-    const { now, time, visible } = this.props
+    const { time, visible } = this.props
+    const { now } = this.state;
     return (
       <Marker modifier="now" x={time.toX(now)} visible={visible}>
         <div>
