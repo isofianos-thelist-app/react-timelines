@@ -21,14 +21,13 @@ class NowMarker extends PureComponent {
   }
 
   tick() {
-    this.setState({
-      time: new Date()
-    });
+    this.setState({ time: new Date() });
   }
 
   render() {
     const { time, visible } = this.props
     const { now } = this.state;
+    console.log(now);
     return (
       <Marker modifier="now" x={time.toX(now)} visible={visible}>
         <div>
