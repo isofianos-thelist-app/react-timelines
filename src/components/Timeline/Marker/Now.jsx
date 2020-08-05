@@ -26,13 +26,12 @@ class NowMarker extends PureComponent {
 
   render() {
     const { time, visible } = this.props
-    const { now } = this.state;
-    console.log(now);
+    console.log(this.state.now);
     return (
-      <Marker modifier="now" x={time.toX(now)} visible={visible}>
+      <Marker modifier="now" x={time.toX(this.state.now)} visible={visible}>
         <div>
           <div>Now</div>
-          <strong>{getDayMonth(now)}</strong>
+          <strong>{getDayMonth(this.state.now)}</strong>
         </div>
       </Marker>
     )
