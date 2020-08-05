@@ -13,7 +13,7 @@ class NowMarker extends PureComponent {
   componentDidMount() {
     this.intervalID = setInterval(
       () => this.tick(),
-      ONE_MINUTE_IN_MILLISECONDS
+      nowRefreshInterval || ONE_MINUTE_IN_MILLISECONDS
     );
   }
   componentWillUnmount() {
@@ -29,6 +29,7 @@ class NowMarker extends PureComponent {
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
     const dateTimeNow = new Date(`${year}-${month}-${day}T${hour}:${minutes}:${seconds}.000Z`);
+    console.log(dateTimeNow);
     this.setState({ now: dateTimeNow });
   }
 
@@ -51,6 +52,7 @@ NowMarker.propTypes = {
   }).isRequired,
   visible: PropTypes.bool.isRequired,
   now: PropTypes.instanceOf(Date).isRequired,
+  nowRefreshInterval: PropTypes.number
 }
 
 export default NowMarker
