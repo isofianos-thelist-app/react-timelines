@@ -4,16 +4,16 @@ import PropTypes from 'prop-types'
 import Marker from '.'
 import { getDayMonth } from '../../../utils/formatDate'
 
+const ONE_MINUTE_IN_MILLISECONDS = 1 * 60 * 1000;
+
 class NowMarker extends PureComponent {
 
-  state = {
-    now: this.props.now
-  }
+  state = { now: this.props.now }
 
   componentDidMount() {
     this.intervalID = setInterval(
       () => this.tick(),
-      5 * 1000
+      ONE_MINUTE_IN_MILLISECONDS
     );
   }
   componentWillUnmount() {
@@ -21,12 +21,19 @@ class NowMarker extends PureComponent {
   }
 
   tick() {
-    this.setState({ now: new Date() });
+    const now = new Date();
+    const year = now.getFullYear().toString();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    const hour = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const dateTimeNow = new Date(`${year}-${month}-${day}T${hour}:${minutes}:${seconds}.000Z`);
+    this.setState({ now: dateTimeNow });
   }
 
   render() {
     const { time, visible } = this.props
-    console.log(this.state.now);
     return (
       <Marker modifier="now" x={time.toX(this.state.now)} visible={visible}>
         <div>
