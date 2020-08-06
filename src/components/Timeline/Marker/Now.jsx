@@ -29,7 +29,6 @@ class NowMarker extends PureComponent {
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
     const dateTimeNow = new Date(`${year}-${month}-${day}T${hour}:${minutes}:${seconds}.000Z`);
-    console.log(dateTimeNow);
     this.setState({ now: dateTimeNow });
   }
 
